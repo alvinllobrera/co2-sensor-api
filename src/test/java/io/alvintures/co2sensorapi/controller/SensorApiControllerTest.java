@@ -53,7 +53,7 @@ class SensorApiControllerTest {
 
         assertThat(sensorApiController.getSensorStatus(uuid))
                 .as("should return the status returned by the service")
-                .isEqualTo(SensorStatus.OK);
+                .containsEntry("status", SensorStatus.OK);
     }
 
     @Test
